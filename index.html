@@ -74,10 +74,8 @@
   ]
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Syne:wght@700;800&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,800&text=%C3%9F&display=swap">
+<link rel="preload" href="fonts/syne-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/fonts.css">
 <style>
   /* Layout: summer lookbook — oversized wordmark over a three-photo strip, product modules whose bowl-shaped swatches swap photos and clips, a reel of portrait videos, a cart drawer; stone-neutral ground with cobalt as the single accent; dark mode is the pool at night */
   :root {
@@ -635,6 +633,11 @@
     font-size: 13px;
     color: var(--ink-soft);
   }
+  .legal-links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+  .legal-links a { color: var(--ink-soft); text-underline-offset: 3px; }
+  @media (hover: hover) and (pointer: fine) {
+    .legal-links a:hover { color: var(--ink); }
+  }
 
   /* Cart drawer */
   .cart {
@@ -1117,9 +1120,13 @@
 </main>
 
 <footer class="site-foot wrap">
-  <span>Berluna</span>
-  <span>Handgemacht in Berlin</span>
-  <span>© 2026</span>
+  <span>Berluna · Handgemacht in Berlin · © 2026</span>
+  <nav class="legal-links" aria-label="Rechtliches">
+    <a href="impressum.html">Impressum</a>
+    <a href="datenschutz.html">Datenschutz</a>
+    <a href="widerruf.html">Widerrufsbelehrung</a>
+    <a href="widerruf.html#widerrufen">Vertrag hier widerrufen</a>
+  </nav>
 </footer>
 
 <dialog class="cart" id="cart" aria-labelledby="cart-title">
@@ -1161,7 +1168,7 @@
         <textarea id="co-note" name="note" rows="3"></textarea>
       </label>
       <button class="btn btn--wide" type="submit">Bestellung vorbereiten</button>
-      <p class="fine">Deine Bestellung geht per E-Mail an uns und ist noch unverbindlich. Wir bestätigen sie und schicken dir Versandkosten und Zahlungsinfos.</p>
+      <p class="fine">Deine Bestellung geht per E-Mail an uns und ist noch unverbindlich. Wir bestätigen sie und schicken dir Versandkosten und Zahlungsinfos. Wie wir mit deinen Daten umgehen, steht in der <a href="datenschutz.html">Datenschutzerklärung</a>. Du hast ein 14-tägiges <a href="widerruf.html">Widerrufsrecht</a>.</p>
     </form>
 
     <div class="sent" data-sent hidden>

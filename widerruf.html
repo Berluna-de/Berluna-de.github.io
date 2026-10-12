@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Widerruf – Berluna</title>
+<meta name="robots" content="noindex, follow">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="legal.css">
+</head>
+<body>
+
+<header class="legal-head">
+  <a href="./" aria-label="Berluna, zur Startseite">
+    <svg viewBox="0 0 28 18" aria-hidden="true"><path d="M1 1.5 H27 Q27 17 14 17 Q1 17 1 1.5 Z" fill="currentColor"/></svg>
+    Berluna
+  </a>
+  <a class="back" href="./">Zurück zum Shop</a>
+</header>
+
+<main>
+  <h1>Widerrufs&shy;belehrung</h1>
+  <p class="lede">Verbraucherinnen und Verbraucher haben ein gesetzliches Widerrufsrecht. Ganz unten kannst du deinen Vertrag direkt hier widerrufen.</p>
+
+  <h2>Widerrufsrecht</h2>
+  <p>Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen.</p>
+  <p>Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag, an dem Sie oder ein von Ihnen benannter Dritter, der nicht der Beförderer ist, die Waren in Besitz genommen haben bzw. hat.</p>
+  <p>Um Ihr Widerrufsrecht auszuüben, müssen Sie uns (Luna Friedenau, Inhaber Antoni Zukowski, Rheinstraße 19, 12161 Berlin, E-Mail: <a href="mailto:mz10berlin@gmail.com">mz10berlin@gmail.com</a>) mittels einer eindeutigen Erklärung (z. B. ein mit der Post versandter Brief oder E-Mail) über Ihren Entschluss, diesen Vertrag zu widerrufen, informieren. Sie können dafür das unten stehende Muster-Widerrufsformular oder die Funktion „Vertrag hier widerrufen“ verwenden, was jedoch nicht vorgeschrieben ist.</p>
+  <p>Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.</p>
+
+  <h2>Folgen des Widerrufs</h2>
+  <p>Wenn Sie diesen Vertrag widerrufen, haben wir Ihnen alle Zahlungen, die wir von Ihnen erhalten haben, einschließlich der Lieferkosten (mit Ausnahme der zusätzlichen Kosten, die sich daraus ergeben, dass Sie eine andere Art der Lieferung als die von uns angebotene, günstigste Standardlieferung gewählt haben), unverzüglich und spätestens binnen vierzehn Tagen ab dem Tag zurückzuzahlen, an dem die Mitteilung über Ihren Widerruf dieses Vertrags bei uns eingegangen ist. Für diese Rückzahlung verwenden wir dasselbe Zahlungsmittel, das Sie bei der ursprünglichen Transaktion eingesetzt haben, es sei denn, mit Ihnen wurde ausdrücklich etwas anderes vereinbart; in keinem Fall werden Ihnen wegen dieser Rückzahlung Entgelte berechnet.</p>
+  <p>Wir können die Rückzahlung verweigern, bis wir die Waren wieder zurückerhalten haben oder bis Sie den Nachweis erbracht haben, dass Sie die Waren zurückgesandt haben, je nachdem, welches der frühere Zeitpunkt ist.</p>
+  <p>Sie haben die Waren unverzüglich und in jedem Fall spätestens binnen vierzehn Tagen ab dem Tag, an dem Sie uns über den Widerruf dieses Vertrags unterrichten, an uns zurückzusenden oder zu übergeben. Die Frist ist gewahrt, wenn Sie die Waren vor Ablauf der Frist von vierzehn Tagen absenden.</p>
+  <p>Sie tragen die unmittelbaren Kosten der Rücksendung der Waren.</p>
+  <p>Sie müssen für einen etwaigen Wertverlust der Waren nur aufkommen, wenn dieser Wertverlust auf einen zur Prüfung der Beschaffenheit, Eigenschaften und Funktionsweise der Waren nicht notwendigen Umgang mit ihnen zurückzuführen ist.</p>
+
+  <h2>Muster-Widerrufs&shy;formular</h2>
+  <div class="box">
+    <p>(Wenn Sie den Vertrag widerrufen wollen, dann füllen Sie bitte dieses Formular aus und senden Sie es zurück.)</p>
+    <p>An Luna Friedenau, Inhaber Antoni Zukowski, Rheinstraße 19, 12161 Berlin, E-Mail: mz10berlin@gmail.com:</p>
+    <p>Hiermit widerrufe(n) ich/wir (*) den von mir/uns (*) abgeschlossenen Vertrag über den Kauf der folgenden Waren (*)/die Erbringung der folgenden Dienstleistung (*)</p>
+    <p>Bestellt am (*)/erhalten am (*)</p>
+    <p>Name des/der Verbraucher(s)</p>
+    <p>Anschrift des/der Verbraucher(s)</p>
+    <p>Unterschrift des/der Verbraucher(s) (nur bei Mitteilung auf Papier)</p>
+    <p>Datum</p>
+    <p>(*) Unzutreffendes streichen.</p>
+  </div>
+
+  <h2 id="widerrufen">Vertrag hier widerrufen</h2>
+  <p>Füll die Felder aus und tipp auf „Widerruf bestätigen“. Daraus entsteht eine fertige Widerrufs-E-Mail an uns. Wir bestätigen dir den Eingang deines Widerrufs umgehend per E-Mail.</p>
+
+  <form class="form" id="withdraw-form">
+    <label class="field">Name
+      <input id="wd-name" name="name" autocomplete="name" required>
+    </label>
+    <label class="field">E-Mail-Adresse, an die wir die Bestätigung schicken
+      <input id="wd-email" name="email" type="email" autocomplete="email" required>
+    </label>
+    <label class="field">Welche Bestellung? (z. B. „Klein · Kobalt, bestellt am 3. Oktober“)
+      <input id="wd-order" name="order" required>
+    </label>
+    <label class="field">Erhalten am (optional)
+      <input id="wd-received" name="received">
+    </label>
+    <button class="btn" type="submit">Widerruf bestätigen</button>
+  </form>
+
+  <div class="result" id="withdraw-result" hidden>
+    <p><strong>Fast geschafft.</strong> Tipp auf „E-Mail öffnen“ und schick die vorbereitete E-Mail ab. Mit dem Absenden ist dein Widerruf erklärt.</p>
+    <a class="btn" id="wd-mailto" href="mailto:mz10berlin@gmail.com">E-Mail öffnen</a>
+    <p class="fine">Öffnet sich nichts? Kopier den Text und schick ihn an mz10berlin@gmail.com.</p>
+    <textarea id="wd-text" rows="9" readonly aria-label="Text des Widerrufs"></textarea>
+    <button class="btn btn--ghost" type="button" id="wd-copy">Text kopieren</button>
+  </div>
+
+  <p class="stand"><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutzerklärung</a></p>
+</main>
+
+<script>
+  const form = document.getElementById('withdraw-form');
+  const result = document.getElementById('withdraw-result');
+  const textEl = document.getElementById('wd-text');
+  const mailtoEl = document.getElementById('wd-mailto');
+  const copyBtn = document.getElementById('wd-copy');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const today = new Date().toLocaleDateString('de-DE');
+    const text = [
+      'An Luna Friedenau, Inhaber Antoni Zukowski, Rheinstraße 19, 12161 Berlin',
+      '',
+      'Hiermit widerrufe ich den von mir abgeschlossenen Vertrag über den Kauf der folgenden Waren:',
+      data.get('order'),
+      ...(data.get('received') ? [`Erhalten am: ${data.get('received')}`] : []),
+      '',
+      `Name: ${data.get('name')}`,
+      `E-Mail für die Bestätigung: ${data.get('email')}`,
+      `Datum: ${today}`,
+    ].join('\n');
+    textEl.value = text;
+    mailtoEl.href = `mailto:mz10berlin@gmail.com?subject=${encodeURIComponent('Widerruf meiner Bestellung')}&body=${encodeURIComponent(text.replace(/\n/g, '\r\n'))}`;
+    result.hidden = false;
+    result.scrollIntoView({ block: 'start' });
+  });
+
+  copyBtn.addEventListener('click', () => {
+    const done = () => {
+      copyBtn.textContent = 'Kopiert';
+      setTimeout(() => { copyBtn.textContent = 'Text kopieren'; }, 2000);
+    };
+    const fallback = () => { textEl.focus(); textEl.select(); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(textEl.value).then(done, fallback);
+    } else {
+      fallback();
+    }
+  });
+</script>
+
+</body>
+</html>
