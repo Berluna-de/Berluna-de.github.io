@@ -32,7 +32,8 @@
       "name": "Berluna",
       "url": "https://berluna-de.github.io/",
       "logo": "https://berluna-de.github.io/favicon-192.png",
-      "email": "mz10berlin@gmail.com",
+      "email": "az82berlin@gmail.com",
+      "telephone": "+49 171 4121116",
       "address": { "@type": "PostalAddress", "addressLocality": "Berlin", "addressCountry": "DE" }
     },
     {
@@ -424,6 +425,7 @@
     letter-spacing: -0.04em;
     margin: 0;
   }
+  .price-block { display: grid; justify-items: end; gap: 2px; }
   .price {
     margin: 0;
     font-size: clamp(20px, 2vw, 26px);
@@ -431,6 +433,7 @@
     font-variant-numeric: tabular-nums;
     white-space: nowrap;
   }
+  .tax-note { margin: 0; font-size: 12px; line-height: 1.4; color: var(--ink-soft); text-align: right; }
   .info-head .label { color: var(--accent); }
   .desc { margin: 0; font-size: 17px; line-height: 1.6; }
 
@@ -622,6 +625,13 @@
   @media (hover: hover) and (pointer: fine) {
     .mail:hover { text-decoration-color: currentColor; }
   }
+  .phone {
+    font-size: clamp(18px, 2.4vw, 26px);
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink);
+    text-decoration: none;
+  }
 
   .site-foot {
     display: flex;
@@ -759,6 +769,14 @@
     font-size: 17px;
   }
   .sum-row strong { font-size: 24px; font-variant-numeric: tabular-nums; }
+  .pay-note {
+    margin: 4px 0 0;
+    padding: 12px 14px;
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
   .fine { margin: 6px 0 0; font-size: 13px; line-height: 1.5; color: var(--ink-soft); }
 
   .checkout, .sent { display: grid; gap: 14px; }
@@ -896,7 +914,10 @@
           <div class="info-head">
             <div class="info-title">
               <h3>Groß</h3>
-              <p class="price">89&nbsp;€</p>
+              <div class="price-block">
+                <p class="price">89&nbsp;€</p>
+                <p class="tax-note">ohne USt. gem. §&nbsp;19 UStG, zzgl. <a href="versand.html">Versand</a></p>
+              </div>
             </div>
             <p class="label">Mit langen Schulterriemen</p>
           </div>
@@ -973,7 +994,10 @@
           <div class="info-head">
             <div class="info-title">
               <h3>Klein</h3>
-              <p class="price">59&nbsp;€</p>
+              <div class="price-block">
+                <p class="price">59&nbsp;€</p>
+                <p class="tax-note">ohne USt. gem. §&nbsp;19 UStG, zzgl. <a href="versand.html">Versand</a></p>
+              </div>
             </div>
             <p class="label">Mit Griff in der Wand</p>
           </div>
@@ -1113,8 +1137,9 @@
 
   <section id="kontakt" class="wrap contact">
     <h2>Anfragen</h2>
-    <p>Fragen zu Farben, Größen oder Verfügbarkeit? Schreib uns eine E-Mail.</p>
-    <a class="mail" href="mailto:mz10berlin@gmail.com">mz10berlin@gmail.com</a>
+    <p>Fragen zu Farben, Größen oder Verfügbarkeit? Schreib uns eine E-Mail oder ruf an.</p>
+    <a class="mail" href="mailto:az82berlin@gmail.com">az82berlin@gmail.com</a>
+    <a class="phone" href="tel:+491714121116">+49 171 4121116</a>
   </section>
 
 </main>
@@ -1122,6 +1147,7 @@
 <footer class="site-foot wrap">
   <span>Berluna · Handgemacht in Berlin · © 2026</span>
   <nav class="legal-links" aria-label="Rechtliches">
+    <a href="versand.html">Versand &amp; Zahlung</a>
     <a href="impressum.html">Impressum</a>
     <a href="datenschutz.html">Datenschutz</a>
     <a href="widerruf.html">Widerrufsbelehrung</a>
@@ -1142,7 +1168,7 @@
 
     <div data-sum hidden>
       <div class="sum-row"><span>Zwischensumme</span><strong data-subtotal>0 €</strong></div>
-      <p class="fine">zzgl. Versand. Die Versandkosten schicken wir dir mit der Bestätigung.</p>
+      <p class="fine">Gemäß § 19 UStG ohne Umsatzsteuer, zzgl. Versand. Die Versandkosten richten sich nach dem Lieferland, wir schicken sie dir mit der Bestätigung. Mehr unter <a href="versand.html">Versand &amp; Zahlung</a>.</p>
     </div>
 
     <form class="checkout" data-checkout hidden>
@@ -1164,18 +1190,22 @@
           <input id="co-city" name="city" autocomplete="address-level2" required>
         </label>
       </div>
+      <label class="field">Land
+        <input id="co-country" name="country" autocomplete="country-name" value="Deutschland" required>
+      </label>
       <label class="field">Nachricht (optional)
         <textarea id="co-note" name="note" rows="3"></textarea>
       </label>
+      <p class="pay-note"><strong>Zahlung per PayPal.</strong> Mit unserer Bestätigung bekommst du den Gesamtbetrag inklusive Versand und eine PayPal-Zahlungsaufforderung.</p>
       <button class="btn btn--wide" type="submit">Bestellung vorbereiten</button>
-      <p class="fine">Deine Bestellung geht per E-Mail an uns und ist noch unverbindlich. Wir bestätigen sie und schicken dir Versandkosten und Zahlungsinfos. Wie wir mit deinen Daten umgehen, steht in der <a href="datenschutz.html">Datenschutzerklärung</a>. Du hast ein 14-tägiges <a href="widerruf.html">Widerrufsrecht</a>.</p>
+      <p class="fine">Deine Bestellung geht per E-Mail an uns und ist noch unverbindlich. Erst mit deiner Zahlung wird sie verbindlich, mehr dazu unter <a href="versand.html">Versand &amp; Zahlung</a>. Wie wir mit deinen Daten umgehen, steht in der <a href="datenschutz.html">Datenschutzerklärung</a>. Du hast ein 14-tägiges <a href="widerruf.html">Widerrufsrecht</a>.</p>
     </form>
 
     <div class="sent" data-sent hidden>
       <h3>Fast geschafft</h3>
-      <p>Tipp auf „E-Mail öffnen“ und schick die fertige Bestellung ab. Wir melden uns dann mit Versandkosten und Zahlungsinfos.</p>
-      <a class="btn btn--wide" data-mailto href="mailto:mz10berlin@gmail.com">E-Mail öffnen</a>
-      <p class="fine">Öffnet sich nichts? Kopier den Text und schick ihn an <span class="sel">mz10berlin@gmail.com</span>.</p>
+      <p>Tipp auf „E-Mail öffnen“ und schick die fertige Bestellung ab. Wir melden uns dann mit dem Gesamtbetrag inklusive Versand und einer PayPal-Zahlungsaufforderung.</p>
+      <a class="btn btn--wide" data-mailto href="mailto:az82berlin@gmail.com">E-Mail öffnen</a>
+      <p class="fine">Öffnet sich nichts? Kopier den Text und schick ihn an <span class="sel">az82berlin@gmail.com</span>.</p>
       <textarea id="order-text" rows="9" readonly aria-label="Bestelltext"></textarea>
       <button class="btn btn--wide btn--ghost" type="button" data-copy>Text kopieren</button>
       <button class="link-btn" type="button" data-back>Zurück zum Warenkorb</button>
@@ -1253,7 +1283,7 @@
   }
 
   /* Cart */
-  const SHOP_EMAIL = 'mz10berlin@gmail.com';
+  const SHOP_EMAIL = 'az82berlin@gmail.com';
   const STORE_KEY = 'berluna-cart';
   const euro = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 });
 
@@ -1385,8 +1415,10 @@
       data.get('name'),
       data.get('street'),
       `${data.get('zip')} ${data.get('city')}`,
+      data.get('country'),
       '',
       `E-Mail: ${data.get('email')}`,
+      'Zahlung: PayPal',
       ...(data.get('note') ? ['', `Nachricht: ${data.get('note')}`] : []),
     ].join('\n');
   }
